@@ -110,9 +110,11 @@ export default function EventDetails() {
       {isDeleting && (
         <Modal onClose={handleStopDelete}>
           <h2>Are you sure?</h2>
-          <p>
-            Do you really want to delete this event? This action cannot be
-            undone!
+          <div>
+            <p>
+              Do you really want to delete this event? This action cannot be
+              undone!
+            </p>
             <div className="form-actions">
               {isPendingDeletion && <p>Deleting, please wait...</p>}
               {!isPendingDeletion && (
@@ -126,7 +128,7 @@ export default function EventDetails() {
                 </>
               )}
             </div>
-          </p>
+          </div>
           {isErrorDeleting && (
             <ErrorBlock
               title="Failed to delete event."
